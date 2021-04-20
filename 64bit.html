@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>64-bit OS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* 
+{
+  box-sizing: border-box;
+}
+body 
+{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header 
+{
+  padding: 80px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+.header h1 
+{
+  font-size: 40px;
+}
+.navbar 
+{
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a 
+{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar a.right 
+{
+  float: right;
+}
+.navbar a:hover 
+{
+  background-color: #ddd;
+  color: black;
+}
+.row 
+{  
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+.side 
+{
+  -ms-flex: 30%; 
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.main 
+{   
+  -ms-flex: 70%; 
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.img 
+{
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: Gray;
+  color: white;
+}
+@media screen and (max-width: 700px) 
+{
+  .row 
+  {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) 
+{
+  .navbar a 
+  {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Building Logo With Visual Studio Code</h1>
+  <p>Explanation of Assignment</p>
+</div>
+</div>
+<div class="navbar">
+  <a href="https://github.com/AlyhaMahmood-19/64-bitOS">GitHub Link</a>
+  <a href="https://drive.google.com/file/d/1i_qnNimGpQdAC6Pubv2SNwc5PYoLuiTC/view?usp=sharing">CV/Resume</a>
+  <a href="https://en.wikipedia.org/wiki/64-bit_computing">What is 64-bit OS?</a>
+  <a href="https://g.co/kgs/hNvNho">Visual Studio Code</a>  
+  <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a>  
+  <a href="https://seecs.nust.edu.pk/" class="right">NUST-SEECS</a>
+</div>
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>My Institution:</h5>
+      <div class="img">
+      <a target="logo" href="logo.png">
+      <img src="logo.png" alt="logo">
+      </a><br>
+      </div><br>
+    <p>My name is Alyha Mahmood and I am a student of Nust-Seecs</p><br>
+    <h3>My Discipline</h3><br>
+    <p>Currently I am enrolled in the 4th Semester of Bachelor's in computer Science</p>
+      <div class="img">
+      <a target="seecs" href="seecs.png">
+      <img src="seecs.png" alt="seecs">
+      </a>
+      </div><br>
+      <p style="line-height:1.8">As we all know computer science is a very important field and everyone wants to make a career
+     in this field.</p>
+      <p style="line-height:1.8"> I want to become a successful expert in the field of Information Technology by
+      channelizing my technical knowledge and skills to ensure personal and professional growth and
+      to contribute to the prosperity of the organization.</p>
+      <p style="line-height:1.8">I usually keep myself enrolled in social
+      activities offered at my campus. Co-curricular activities are a part of my daily routine.</p>
+      <p style="line-height:1.8">  I like to deal with internal and external customers at all levels to ensure successful communication
+      through active listening and thoughtful questions.</p>
+      <p style="line-height:1.8"> I like resolving in-depth queries in a methodical
+      manner independently and with internal and external business partners to find appropriate
+      resolutions and efficiencies, all with a high level of quality. </p>
+      <p style="line-height:1.8">   I enjoy sharing knowledge and
+      encouraging the development of others to achieve specific team goals.</p>
+      <h3>About Article</h3><br>
+      <p style="line-height:1.8">This article contains detailed instruction about the working and building of 64-bit operating system.</p>
+      </div>
+
+      <div class="main">
+      <h1>x86-64 Operating System</h1>
+      <h5>Working of a 64 bit OS, April 20, 2021</h5>
+      <h1>Introduction</h1>
+      <p>A computer Operating System does lot of complex tasks like process management, memory management, 
+I/O management etc and building one of its kind is the hardest task for a Computer scientist. But it will be always exciting to experience the process of building an Operating System.
+ This website will walk through the steps in making the operating system.</p>
+<p>You need to have a cross compiler install on the machine in which you are going to build the new operating system and that is VS Code.</p>
+      <h2>OUTPUT</h2>
+      <div class="img">
+      <a target="output" href="output.png">
+      <img src="output.png" alt="output">
+      </a></div>
+      <br>
+      <p>This is an output of the logo of 64-bit Operating System drawn with the help of visual Studio Code</p>
+      <br>
+      <h1>TASK NO 1 EXPLANATION</h1>
+      <p>Follow the steps of installation and building your OS given in the first video.After you have successfully installed visual studio code and docker open the docker file and write the following code inside it</p>
+<h4 style="color:gray">FROM randomdude/gcc-cross-x86_64-elf</h4>
+<h4 style="color:gray">RUN apt-get update</h4>
+<h4 style="color:gray">RUN apt-get upgrade -y</h4>
+<h4 style="color:gray">RUN apt-get install -y nasm</h4>
+<h4 style="color:gray">RUN apt-get install -y xorriso</h4>
+<h4 style="color:gray">RUN apt-get install -y grub-pc-bin</h4>
+<h4 style="color:gray">RUN apt-get install -y grub-common</h4>
+<h4 style="color:gray">VOLUME /root/env</h4>
+<h4 style="color:gray">WORKDIR /root/env</h4>
+<p>When you run the above mentioned command in on your PC it takes some time to build the image that is being used in the video. Similar output will also be shown on your PC.</p>
+<h2>Setup</h2>
+<p>Build an image for our build-environment:</p>
+<li style="color:gray">docker build buildenv -t myos-buildenv</li>
+<h2>Build</h2>
+<p>For Windows write the following command selecting CMD</p>
+<ul>
+<li style="color:gray">docker run --rm -it -v "%cd%":/root/env myos-buildenv</li>
+</ul>
+<div class="img">
+<a target="build" href="build.png">
+<img src="build.png" alt="build">
+</a></div>
+
+<p>When you run the following command ie <b>command no 1</b> the terminal shows the following output</p>
+<li style="color:gray">docker build buildenv -t myos-buildenv</li>
+<div class="img">
+<a target="c1" href="c1.png">
+<img src="c1.png" alt="c1">
+</a></div>
+
+<p>When you run the following command ie <b>command no 2</b> the terminal shows the following output</p>
+<li style="color:gray">docker run --rm -it -v %cd%:/root/env myos-buildenv</li>
+<div class="img">
+<a target="c2" href="c2.png">
+<img src="c2.png" alt="c2">
+</a></div>
+
+<p>When you run the following command ie <b>command no 3</b> the terminal shows the following output</p>
+<li style="color:gray">make build-x86_64</li>
+<div class="img">
+<a target="c3" href="c3.png">
+<img src="c3.png" alt="c3">
+</a></div>
+
+<p>When you run the following command ie <b>command no 4</b> the terminal shows the following output</p>
+<li style="color:gray">exit</li>
+<div class="img">
+<a target="c4" href="c4.png">
+<img src="c4.png" alt="c4">
+</a></div>
+
+<p>When you run the following command ie <b>command no 5</b> the terminal shows the following output</p>
+<li style="color:gray">qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso</li>
+<div class="img">
+<a target="c5" href="c5.png">
+<img src="c5.png" alt="c5">
+</a></div>
+
+<h2>QEMU Command</h2>
+<p>Add QEMU to your path and run your own built Operating System</p>
+<li style="color:gray">qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso</li>
+<h1>TASK NO 2 EXPLANATION</h1>
+<h2>Working</h2>
+<p>Create an empty folder anywhere on your PC and open it through VS Code. This is the folders in which we will keep all our files necessary to run our operating system</p>
+<p>First we have to create some assembly files, which will setup virtual addressing and long mode</p>
+<p>To combine all the object files into a single executable we need a linker.ld file,
+"linker.ld".</p>
+<p>Next step will be to create a main.c file which will print the image on to the screen.</p>
+<p>The final step before building the new operating system is to create a "Makefile".</p>
+<p>In order to test the OS, you need to have a virtual machine and that is Qemu.You can download Qemu from the top of the page.</p>
+<li><b>Dockerfile</b>
+<p>A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble 
+an image. Using docker build users can create an automated build that executes several command-line instructions in succession.The code to be 
+written in this file has been mentione above in Task 1.</p></li>
+<li><b>header.asm</b>
+<p>This file contains the following code.</p>
+<p style="color:gray">section .multiboot_header</p>
+<p style="color:gray">header_start:</p>
+<p style="color:gray">	; magic number</p>
+<p style="color:gray">	dd 0xe85250d6 ; multiboot2</p>
+<p style="color:gray">	; architecture</p>
+<p style="color:gray">	dd 0 ; protected mode i386</p>
+<p style="color:gray">	; header length</p>
+<p style="color:gray">	dd header_end - header_start</p>
+<p style="color:gray">	; checksum</p>
+<p style="color:gray">	dd 0x100000000 - (0xe85250d6 + 0 + (header_end - header_start))</p>
+<p style="color:gray">	; end tag</p>
+<p style="color:gray">	dw 0</p>
+<p style="color:gray">	dw 0</p>
+<p style="color:gray">	dd 8</p>
+<p style="color:gray">header_end:</p></li>
+
+<li><b>main.asm</b>
+<p>This file contrains the assembly language code which is used to build the Operating System, it contains all the necesaary registers and commands for example, it has mov instructions,
+jmp instructions, loops and stack storage commands etc.
+</li>
+
+<li><b>main.c</b>
+<p>This is the file which is used to un your code, to make a logo, add print statements to this file and run with the five commands
+ again and you will get your desired image as output.</p>
+<p style="color:gray">void kernel_main() {</p>
+<p style="color:gray">print_clear();</p>
+<p style="color:gray">print_set_color(PRINT_COLOR_YELLOW, PRINT_COLOR_BLACK);</p>
+<p style="color:gray">print_str("Welcome to our 64-bit kernel!");</p>
+</li>
+
+<li><b>print.c</b>
+<p>This file contains the pattern of how to print in the main file is it contains the color schemes and alignment functions.</li>
+
+<li><b>print.h</b></li>
+<p>This file contains the different colors and coding and also assigns a number to each color.</li>
+
+<li><b>.gitignore</b>
+<p style="color:gray">boot/kernel.bin</p>
+</li>
+<h2>All Commands</h2>
+<li style="color:gray">docker build buildenv -t myos-buildenv</li>
+<li style="color:gray">docker run --rm -it -v %cd%:/root/env myos-buildenv</li>
+<li style="color:gray">make build-x86_64</li>
+<li style="color:gray">exit</li>
+<li style="color:gray">qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso</li>
+
+      <h2>BUILD YOUR OWN OS</h2>
+      <div class="navbar">
+      <a href="https://www.youtube.com/watch?v=FkrpUaGThTQ">Boot code and multiboot header</a>
+      <a href="https://www.youtube.com/watch?v=wz9CZBeXR6U">Stack, long mode and printing using C language code</a>
+      <a href="https://www.youtube.com/watch?v=MlIzFUI1QGA" class="right">Visual Studio Code</a>
+      </div> 
+
+      <div class="main">
+      <h1>Pre-Requisites</h1>
+       <ol>
+       <li>VISUAL STUDIO CODE<a href="https://code.visualstudio.com/download"> https://code.visualstudio.com/download</a> </li>
+       <li>DOCKER<a href="https://en.wikipedia.org/wiki/Docker_(software)" >https://en.wikipedia.org/wiki/Docker_(software)</a> </li>
+       <li>QEMU<a href="https://www.qemu.org/download/"> https://www.qemu.org/download/</a></li>
+       </ol> 
+
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<footer>
+ <p>Author: Alyha Mahmood<br>
+  <a href="mailto:alyhamehmood@gmail.com">alyhamehmood@gmail.com</a></p>
+</footer>
+</div>
+
+</body>
+</html>
